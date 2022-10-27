@@ -12,5 +12,5 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }} 
           PORT: ${{ secrets.PORT }}
-          source: "/opt/*"
+          source: "/opt/*" 
           target: "/var/www/html" 
