@@ -7,15 +7,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps: 
-    - uses: actions/checkout@v2
+    steps:
+    - uses: actions/checkout@master
     - name: Copiar el contenido del repositorio con scp
-      uses: ilCollez/ssh-scp-deploy@v1.1.0
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSHKEY }}
       with:
-       host: ${{ secrets.SSH_HOST }} 
-       port: ${{ secrets.SSH_PORT }} 
-       username: ${{ secrets.SSH_USER }}  
-       password: ${{ secrets.SSH_PASSWORD }} 
-       files: "/opt/*"
-       remote-path: "/etc/"
-       clean: true
+        source: "site/*"
+        target: "/var/www/html"
