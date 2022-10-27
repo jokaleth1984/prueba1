@@ -14,7 +14,7 @@ jobs:
       with:
        host: ${{ secrets.SSH_HOST }} 
        port: ${{ secrets.SSH_PORT }} 
-       username: ${{ secrets.SSH_USER }} 
+       username: ${{ secrets.SSH_USER }}  
        password: ${{ secrets.SSH_PASSWORD }} 
        files: "prueba1/prueba.docx"
        remote-path: "/var/www/html"
