@@ -10,12 +10,12 @@ jobs:
     - name: Checkout code to workspace
       uses: actions/checkout@v2
     - name: Deploy to web server
-      uses: moonpathbg/scp_uploader@latest
+      uses: horochx/deploy-via-scp@master
       with:
-          port: 22
-          host: ${{ secrets.SERVER_ADDRESS }}
-          origin: "prueba.docx"
-          destination: "/home/jorge/"
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
+         local: prueba.docx
+         remote: ${{ secrets.REMOTE }} 
+         host: ${{ secrets.HOST }} 
+         port: ${{ secrets.PORT }} 
+         user: ${{ secrets.USER }} 
+         key: ${{ secrets.KEY }} 
    
