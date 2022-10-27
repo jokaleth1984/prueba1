@@ -18,3 +18,4 @@ jobs:
        password: ${{ secrets.SSH_PASSWORD }} 
        files: "prueba1/prueba.docx"
        remote-path: "/var/www/html"
+       clean: true
