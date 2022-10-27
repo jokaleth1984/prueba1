@@ -4,7 +4,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+     
       - name: Copiar Contenido de repositorio
         uses: ilCollez/ssh-scp-deploy@v1.1.0    
         with: 
