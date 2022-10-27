@@ -1,21 +1,17 @@
 name: Deploy
-
 on: [push]
-
 jobs:
- 
   deploy:
     runs-on: ubuntu-latest
-
-    
     steps:
       - uses: actions/checkout@master
       - name: Copiar Contenido de repositorio
         uses: appleboy/scp-action@master     
-        with:
+        env:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.SSHKEY }}
+        with:
           source: "/opt/script/*"
           target: "/var/www/html"
