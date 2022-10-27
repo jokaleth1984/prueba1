@@ -13,9 +13,9 @@ jobs:
       uses: horochx/deploy-via-scp@master
       with:
          local: prueba.docx
-         remote: ${{ secrets.REMOTE }} 
+         remote: /home/jorge 
          host: ${{ secrets.HOST }} 
-         port: ${{ secrets.PORT }} 
+         port: 22
          user: ${{ secrets.USER }} 
          key: ${{ secrets.KEY }} 
    
