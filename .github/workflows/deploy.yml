@@ -15,7 +15,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
+        KEY: ${{ secrets.KEY }}
       with:
-        source: "site/*"
+        source: "prueba.docx"
         target: "/var/www/html"
