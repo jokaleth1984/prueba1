@@ -6,11 +6,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Copiar Contenido de repositorio
-        uses: a-was/scp-action@v1    
+        uses: ilCollez/ssh-scp-deploy@v1.1.0    
         with:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }} 
-          PORT: ${{ secrets.PORT }}
-          source: "opt/*"  
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }} 
+          password: ${{ secrets.SSH_PASSWORD }}
+          files: "prueba.doc*"  
           destination: "/var/www" 
