@@ -7,11 +7,10 @@ jobs:
       - uses: actions/checkout@master
       - name: Copiar Contenido de repositorio
         uses: appleboy/scp-action@master     
-        env:
+        with:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }} 
           PORT: ${{ secrets.PORT }}
-        with:
           source: "/opt/*"
           target: "/var/www/html" 
