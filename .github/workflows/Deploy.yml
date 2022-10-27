@@ -9,7 +9,7 @@ jobs:
       - name: Copiar Contenido de repositorio
         uses: ilCollez/ssh-scp-deploy@v1.1.0    
         with: 
-          host: ${{ secrets.SSH_HOST }} 
+          host: ${{ secrets.SSH_HOST }}  
           port: ${{ secrets.SSH_PORT }} 
           username: ${{ secrets.SSH_USER }} 
           password: ${{ secrets.SSH_PASSWORD }}
