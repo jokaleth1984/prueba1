@@ -6,11 +6,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Copiar Contenido de repositorio
-        uses: siva1024/scp-deployer@latest    
+        uses: a-was/scp-action@v1    
         with:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }} 
           PORT: ${{ secrets.PORT }}
           source: "prueba1/prueba.doc"  
-          target: "/var/www" 
+          destination: "/var/www" 
