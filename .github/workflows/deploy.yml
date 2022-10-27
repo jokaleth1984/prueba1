@@ -1,0 +1,21 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Copiar el contenido del repositorio con scp
+      uses: ilCollez/ssh-scp-deploy@v1.1.0
+      env:
+        host: ${{ secrets.SSH_HOST }} # "example.com"
+        port: ${{ secrets.SSH_PORT }} # 22
+        username: ${{ secrets.SSH_USER }} # "user"
+        password: ${{ secrets.SSH_PASSWORD }} # "password"
+      with:
+        source: "prueba.docx*"
+        target: "/var/www/html"
