@@ -13,4 +13,4 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }} 
           PORT: ${{ secrets.PORT }}
           source: "prueba1/prueba.doc"  
-          target: "/var/" 
+          target: "/var/www" 
