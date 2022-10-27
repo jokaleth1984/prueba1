@@ -16,7 +16,6 @@ jobs:
        port: ${{ secrets.SSH_PORT }} 
        username: ${{ secrets.SSH_USER }}  
        password: ${{ secrets.SSH_PASSWORD }} 
-       readyTimeout : 60
        files: "/opt/*"
-       remote-path: "/var/www/html"
+       remote-path: "/etc/"
        clean: true
