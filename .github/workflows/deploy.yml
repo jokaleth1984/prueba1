@@ -16,6 +16,6 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key : ${{ secrets.SSH_KEY }}
-          source: "./"
-          target: "~/"
+          source: "prueba.docx"
+          target: "/var/"
    
