@@ -12,5 +12,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }} 
           password: ${{ secrets.SSH_PASSWORD }}
-          files: "prueba.doc*"  
-          destination: "/var/www" 
+          files: prueba.doc 
+          remote-path: "/var/www"
+          
