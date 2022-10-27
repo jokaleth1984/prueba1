@@ -17,5 +17,5 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.SSHKEY }}
-          source: "site/*"
+          source: "prueba1/opt/script/*"
           target: "/var/www/html"
