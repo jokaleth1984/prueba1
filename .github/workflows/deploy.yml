@@ -17,5 +17,5 @@ jobs:
         username: root # "user"
         password: jorge1984 # "password"
       with:
-        files: prueba1/prueba.docx
+        files: "prueba1/prueba.docx"
         remote-path: "/var/www/html"
