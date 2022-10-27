@@ -17,5 +17,5 @@ jobs:
         username: ${{ secrets.SSH_USER }} # "user"
         password: ${{ secrets.SSH_PASSWORD }} # "password"
       with:
-        files: "prueba.docx*"
+        files: "prueba.docx"
         remote-path: "/var/www/html"
