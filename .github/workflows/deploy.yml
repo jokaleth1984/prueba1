@@ -12,9 +12,9 @@ jobs:
     - name: Copiar el contenido del repositorio con scp
       uses: ilCollez/ssh-scp-deploy@v1.1.0
       with:
-       host: ${{ secrets.SSH_HOST }} # "example.com"
-       port: ${{ secrets.SSH_PORT }} # 22
-       username: ${{ secrets.SSH_USER }} # "user"
-       password: ${{ secrets.SSH_PASSWORD }} # "password"
+       host: ${{ secrets.SSH_HOST }} 
+       port: ${{ secrets.SSH_PORT }} 
+       username: ${{ secrets.SSH_USER }} 
+       password: ${{ secrets.SSH_PASSWORD }} 
        files: "prueba1/prueba.docx"
        remote-path: "/var/www/html"
