@@ -12,10 +12,10 @@ jobs:
     - name: Deploy to web server
       uses: moonpathbg/scp_uploader@latest
       with:
-          host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          username: ${{ secrets.USERNAME }}
-          key : ${{ secrets.SSH_KEY }}
-          source: "prueba1/prueba.docx"
-          target: "/var/"
+          port: 22
+          host: ${{ secrets.SERVER_ADDRESS }}
+          origin: "./*"
+          destination: "/home/${{ secrets.SERVER_USERNAME }}/"
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
    
