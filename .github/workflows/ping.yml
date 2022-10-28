@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Check the URL
         id: ping
-        uses: actions/is-my-site-up@v1.1 
+        uses: keylightberlin/pagerdutyuptime@v1
         with:
-          site: '192.168.88.129'
+           pagerduty_token: 'My Token'
+           pagerduty_from: 'hello@keylight.de'
+           endpoint: '192.168.88.129' 
