@@ -1,8 +1,6 @@
 name: Deploy
 on:
-  push:
-    branches:
-      - master # Change this to your default branch
+  push
 jobs:
   build:
     runs-on: ubuntu-latest
