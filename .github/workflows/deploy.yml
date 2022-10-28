@@ -12,7 +12,7 @@ jobs:
     - name: Deploy to web server
       uses: i3h/deploy-with-scp@v1
       with:
-         src: prueba.docx
+         src: prueba1/opt/script/*
          dest: /var/
          username: ${{ secrets.SERVER_USER }}
          server-ip: ${{ secrets.SERVER_IP }}
