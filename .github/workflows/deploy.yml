@@ -10,13 +10,14 @@ jobs:
     - name: Checkout code to workspace
       uses: actions/checkout@v2
     - name: Deploy to web server
-      uses: ilCollez/ssh-scp-deploy@v1.1.0
+      uses: nicklasfrahm/scp-action@main
       with:
-         host: 192.168.88.129
-         port: 22
-         username: root
-         password: jorge1984
-         files: "git@github.com:jokaleth1984/prueba1.git"
-         remote-path: "/var/www/html"
-         clean: true
+          direction: upload
+          host: 192.1268.88.129
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: |
+            path/to/source/a.txt
+            path/to/source/b.txt
+          target: path/to/target
    
