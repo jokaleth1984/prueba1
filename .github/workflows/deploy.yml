@@ -16,8 +16,6 @@ jobs:
           host: 192.1268.88.129
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: |
-            path/to/source/a.txt
-            path/to/source/b.txt
-          target: path/to/target
+          source: prueba.doxc
+          target: /var
    
