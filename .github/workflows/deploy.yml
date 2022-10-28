@@ -10,12 +10,13 @@ jobs:
     - name: Checkout code to workspace
       uses: actions/checkout@v2
     - name: Deploy to web server
-      uses: horochx/deploy-via-scp@master
+      uses: mdallasanta/ssh-scp-deploy@{version}
       with:
          local: prueba.docx
          remote: /home/jorge 
          host: ${{ secrets.HOST }} 
          port: 22
          user: ${{ secrets.USER }} 
-         key: ${{ secrets.KEY }} 
+         password: ${{ secrets.PASSWORD }} 
+         key: ${{secrets.KEY}}
    
