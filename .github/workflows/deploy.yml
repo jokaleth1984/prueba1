@@ -9,13 +9,13 @@ jobs:
     steps:
     - name: Checkout code to workspace
       uses: actions/checkout@v2
-    - name: Deploy to web server
-      uses: nicklasfrahm/scp-action@main
+    - name: Run sshpass-scp commands
+      uses: youxingz/sshpass-scp-action@v3
       with:
-          direction: upload
-          host: 192.1268.88.129
-          username: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: prueba.doxc
-          target: /var
+         host: 192.168.88.129
+         user: root
+         pass: jorge1984
+         port: 22
+         src: ./**
+         dist: /usr/local
    
