@@ -1,0 +1,12 @@
+on:
+    push
+jobs:
+  ping_url:
+    runs-on: ubuntu-latest
+    name: Ping URL
+    steps:
+      - name: Check the URL
+        id: ping
+        uses: actions/is-my-site-up@v1.1 
+        with:
+          site: '192.168.88.129'
