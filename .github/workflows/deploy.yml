@@ -12,8 +12,8 @@ jobs:
     - name: Deploy to web server
       uses: i3h/deploy-with-scp@v1
       with:
-         src: /path/to/source
-         dest: /path/to/destination
+         src: /prueba1/prueba.docx
+         dest: /var
          username: ${{ secrets.SERVER_USER }}
          server-ip: ${{ secrets.SERVER_IP }}
          ssh-key: ${{ secrets.SERVER_SSH_KEY }}
