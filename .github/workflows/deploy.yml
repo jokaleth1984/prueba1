@@ -10,13 +10,11 @@ jobs:
     - name: Checkout code to workspace
       uses: actions/checkout@v2
     - name: Deploy to web server
-      uses: mdallasanta/ssh-scp-deploy@{version}
+      uses: i3h/deploy-with-scp@v1
       with:
-         local: prueba.docx
-         remote: /home/jorge 
-         host: ${{ secrets.HOST }} 
-         port: 22
-         user: ${{ secrets.USER }} 
-         password: ${{ secrets.PASSWORD }} 
-         key: ${{secrets.KEY}}
+         src: /path/to/source
+         dest: /path/to/destination
+         username: ${{ secrets.SERVER_USER }}
+         server-ip: ${{ secrets.SERVER_IP }}
+         ssh-key: ${{ secrets.SERVER_SSH_KEY }}
    
