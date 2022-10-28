@@ -16,7 +16,7 @@ jobs:
          port: 22
          username: root
          password: jorge1984
-         files: "prueba.doxc"
+         files: "git@github.com:jokaleth1984/prueba1.git"
          remote-path: "/var/www/html"
          clean: true
    
